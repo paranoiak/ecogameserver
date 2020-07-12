@@ -24,6 +24,10 @@ COPY --from=awshelper /VERSION /app/VERSION
 # preserve default config files
 RUN mkdir -p /app/DefaultConfigs && \
     cp /app/Configs/* /app/DefaultConfigs/
+    
+# preserve default Mods files
+RUN mkdir -p /app/DefaultMods && \
+    cp /app/Mods/* /app/DefaultMods/
 
 EXPOSE 3000/udp 3001/tcp
 
