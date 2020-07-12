@@ -27,7 +27,7 @@ RUN mkdir -p /app/DefaultConfigs && \
     
 # preserve default Mods files
 RUN mkdir -p /app/DefaultMods && \
-    cp /app/Mods/* /app/DefaultMods/
+    cp -R /app/Mods/* /app/DefaultMods/
 
 EXPOSE 3000/udp 3001/tcp
 
